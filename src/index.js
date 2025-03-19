@@ -8,7 +8,7 @@ document.addEventListener("DOMContentLoaded", () => {
   form.addEventListener("submit", (e) => {
     e.preventDefault(); 
 
-    const taskDescription = formInput.value
+    const taskDescription = formInput.value.trim()
 
     if (taskDescription) {
     
