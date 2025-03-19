@@ -9,10 +9,12 @@ document.addEventListener("DOMContentLoaded", () => {
       
       formInput.textContent="Wash the dishes";
       
-      const myTasks = document.createElement("li")
+      const myTasks = document.createElement("li");
       myTasks.textContent="Wash the dishes";
+      
 
       taskList.appendChild(myTasks)
+
     })
 });
 
