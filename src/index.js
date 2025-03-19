@@ -7,7 +7,7 @@ document.addEventListener("DOMContentLoaded", () => {
     form.addEventListener("submit",(e)=>{
       e.preventDefault();
       
-      formInput.textContent="Wash the dishes";
+  
       
       const myTasks = document.createElement("li");
       myTasks.textContent="Wash the dishes";
