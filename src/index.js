@@ -1,21 +1,26 @@
 document.addEventListener("DOMContentLoaded", () => {
-  // your code here
-  const form = document.querySelector('#create-task-form');
-    const formInput = document.querySelector('#new-task-description');
-    const taskList = document.querySelector('#tasks');
-
-    form.addEventListener("submit",(e)=>{
-      e.preventDefault();
-      
   
-      
-      const myTasks = document.createElement("li");
-      myTasks.textContent="Wash the dishes";
-      
+  const form = document.querySelector('#create-task-form');
+  const formInput = document.querySelector('#new-task-description');
+  const taskList = document.querySelector('#tasks');
 
-      taskList.appendChild(myTasks)
+  
+  form.addEventListener("submit", (e) => {
+    e.preventDefault(); 
 
-    })
+    const taskDescription = formInput.value
+
+    if (taskDescription) {
+    
+      const newTask = document.createElement("li");
+      newTask.textContent = taskDescription;
+
+      taskList.appendChild(newTask);
+      
+      formInput.value = "";
+    } else {
+      
+      alert("Please enter a task description!");
+    }
+  });
 });
-
-
